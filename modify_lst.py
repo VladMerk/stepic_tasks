@@ -6,7 +6,7 @@ def modify_lst(l):
     """
     for i, value in enumerate(l):
         if value % 2 == 0:
-            l[i] = l[i] // 2
+            l[i] = value // 2
         else:
             del l[i]
 
