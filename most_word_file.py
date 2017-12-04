@@ -12,6 +12,17 @@ abc a bCd bC AbC BC BCD bcd ABC
 Sample Output:
 abc 3
 
+with open('gtx.txt','r') as file:
+    s = file.read().strip().lower().split()
+
+z = {i: s.count(i) for i in s}
+
+maximum = max(z, key=z.get)
+x = {maximum: z[maximum]}
+
+with open('gtx.txt','w') as file:
+    file.write(str(x))        
+
 """
 with open('dataset_3363_3.txt', 'r') as file:
     s = file.read().replace('\n', ' ').lower().split()
