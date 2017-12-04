@@ -21,7 +21,7 @@ maximum = max(z, key=z.get)
 x = {maximum: z[maximum]}
 
 with open('gtx.txt','w') as file:
-    file.write(str(x))        
+    file.write(str(x))
 
 """
 with open('dataset_3363_3.txt', 'r') as file:
