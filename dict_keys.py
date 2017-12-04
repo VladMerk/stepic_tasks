@@ -25,12 +25,10 @@ print(d)                            # {2: [-1, -2, -3]}
 
 d = {}
 def update_dictionary(d, key, value):
-    if key in d.keys():
-        d[key] += [value]
-    elif 2*key in d.keys():
-        d[2*key] += [value]
+    if key in d:
+        d.setdefault(key, []).append(value)
     else:
-        d[2*key] = [value]
+        d.setdefault(key * 2, []).append(value)
 
 d = {}
 print(update_dictionary(d, 1, -1))  # None
