@@ -4,13 +4,13 @@ def modify_lst(l):
 Напишите функцию modify_list(l), которая принимает на вход список целых чисел, удаляет из него все нечётные значения,
      а чётные нацело делит на два. Функция не должна ничего возвращать, требуется только изменение переданного списка
     """
-    for i, value in enumerate(l):
-        if value % 2 == 0:
-            l[i] = value // 2
-        else:
-            del l[i]
+    l[:] = [i//2 for i in l if not i%2]
 
 print(modify_lst(lst))
 print(lst)
+modify_lst(lst)
+print(lst)
+
+lst = [10, 5, 8, 3]
 modify_lst(lst)
 print(lst)
