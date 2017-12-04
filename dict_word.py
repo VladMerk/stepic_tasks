@@ -5,14 +5,6 @@
 Порядок вывода сло может быть произвольным, каждое уникальное слово должно выводиться только один раз.
 """
 
-str = str(input()).lower()
-lst_word = str.split()
-d = {}
-for word in lst_word:
-    if word in d.keys():
-        d[word] += 1
-    else:
-        d[word] = 1
-
-for key, value in d.items():
-    print(key, value, end=' ')
+s = input().lower().split()
+for i in set(s):
+    print(i, s.count(i))
